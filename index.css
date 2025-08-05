@@ -1,0 +1,90 @@
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #f9fafb; /* 밝은 배경 */
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    width: 400px;
+    height: 97vb;
+    padding: 5px;
+    padding-top: 15px;
+    padding-bottom: 0px;
+    box-sizing: border-box;
+}
+
+
+/* header, menu */
+#header,
+#menu {
+    font-size: 18px;
+    text-align: center;
+}
+
+#header {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #222;
+}
+
+#menu {
+    min-height: 35px;
+    max-height: 35px;
+    margin-bottom: 10px;
+    padding: 3px 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fefefe;
+    font-weight: 500;
+}
+
+
+
+/*  */
+/* history */
+#history-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+#history-wrap .history {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #f1f5f9;
+    font-size: 14px;
+    color: #444;
+}
+
+#history-wrap .history:nth-of-type(odd) {
+    background-color: #ffffff;
+}
+
+
+
+/*  */
+/* button */
+main button:first-of-type {
+    margin-top: auto;
+}
+
+main button {
+    padding: 5px;
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+}
