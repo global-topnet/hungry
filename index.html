@@ -1,22 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global-Topnet</title>
+    <title>점심 메뉴 추천</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    
-    <main>
-        <span id="header">오늘의 메뉴는?</span>
-        <span id="menu">아래의 버튼을 눌러주세요</span>
-        <div id="history-wrap"></div>
+    <div class="container">
+        <h1>점심 메뉴 추천</h1>
+        
+        <div id="menu" class="menu-result">버튼을 눌러 메뉴를 뽑아보세요</div>
+        
+        <div class="button-group">
+            <button onclick="searchMenu()" class="btn-primary">메뉴 뽑기</button>
+            <button onclick="clearHistory()" class="btn-secondary">히스토리 초기화</button>
+        </div>
+        
+        <div class="section">
+            <h3>최근 선택한 메뉴</h3>
+            <div id="history-wrap"></div>
+        </div>
 
-        <button onclick="searchMenu()">점심 메뉴 뽑기</button>
-        <button onclick="clearHistory()">쿠키 초기화</button>
-    </main>
-
+        <div class="section">
+            <h3>메뉴 추가</h3>
+            <div class="input-group">
+                <input type="text" id="new-menu-input" placeholder="새 메뉴 이름 입력">
+                <button onclick="addMenu()">추가</button>
+            </div>
+            
+            <button onclick="toggleMenuList()" id="menu-list-toggle" class="btn-toggle">메뉴 목록 보기</button>
+            
+            <div id="menu-list-wrap" style="display: none;">
+                <div id="menu-list"></div>
+            </div>
+        </div>
+    </div>
 
     <script src="index.js"></script>
 </body>
